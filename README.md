@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + shadcn/ui + Tailwind CSS
+
+This is a modern Next.js application set up with [shadcn/ui](https://ui.shadcn.com) components and Tailwind CSS.
+
+## Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **TypeScript** - Type safety and better developer experience
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible UI components
+- **Lucide React** - Icon library
 
 ## Getting Started
 
-First, run the development server:
+### Development Server
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the application:
+
+```bash
+npm run build
+```
+
+Start the production server:
+
+```bash
+npm start
+```
+
+## Adding shadcn/ui Components
+
+To add new components from shadcn/ui:
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+For example:
+```bash
+npx shadcn@latest add card
+npx shadcn@latest add dialog
+npx shadcn@latest add input
+```
+
+Browse all available components at [ui.shadcn.com](https://ui.shadcn.com).
+
+## Project Structure
+
+```
+src/
+├── app/              # Next.js App Router pages
+│   ├── page.tsx      # Home page
+│   ├── layout.tsx    # Root layout
+│   └── globals.css   # Global styles & Tailwind config
+├── components/       # React components
+│   └── ui/           # shadcn/ui components
+└── lib/              # Utility functions
+    └── utils.ts      # Helper utilities
+```
+
+## Configuration Files
+
+- `components.json` - shadcn/ui configuration
+- `tsconfig.json` - TypeScript configuration
+- `next.config.ts` - Next.js configuration
+- `eslint.config.mjs` - ESLint configuration
+
+## Styling
+
+This project uses Tailwind CSS v4 with custom CSS variables for theming. The theme is configured in `src/app/globals.css` and supports both light and dark modes.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploy your Next.js app easily with [Vercel](https://vercel.com/new):
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
